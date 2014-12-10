@@ -100,13 +100,13 @@ def cli(query):
     f.add_column('Seed', align='>')
     f.add_column('Leech', align='>')
     click.echo(f.dumps((
-        index + 1,
+        len(results) - index,
         r.title,
         r.size,
         r.age,
         r.seed,
         r.leech,
-    ) for index, r in enumerate(results)))
+    ) for index, r in enumerate(reversed(results))))
 
     while True:
         index = click.prompt('Choose?', type=int, default=1) - 1
@@ -115,5 +115,7 @@ def cli(query):
         click.echo('Not found')
 
     result = results[index]
+
     click.echo('Downloading %s...' % result.title)
-    subprocess.check_call(['xdg-open', results[index].magnet])
+
+    return subprocess.call(['xdg-open', results[index].magnet])
