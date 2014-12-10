@@ -118,4 +118,4 @@ def cli(query):
 
     click.echo('Downloading %s...' % result.title)
 
-    return subprocess.call(['xdg-open', results[index].magnet])
+    return subprocess.call(['xdg-open', result.magnet])
