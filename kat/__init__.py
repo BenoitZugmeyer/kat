@@ -78,7 +78,7 @@ def search(d):
 @click.argument('query', nargs=-1)
 def cli(query):
     if not query:
-        print('Please set a query')
+        click.echo('Please set a query')
         sys.exit(1)
 
     url = SEARCH_URL.format(urllib.parse.quote(' '.join(query)))

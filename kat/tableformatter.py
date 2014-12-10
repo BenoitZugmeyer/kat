@@ -103,7 +103,6 @@ class TableFormatterWorker(object):
         max_width = 0
         max_acceptable_width = 0
         word_re = self.formatter.whitespace
-        print(word_re)
         for s in strings:
             width = len(s)
 
@@ -127,7 +126,6 @@ class TableFormatterWorker(object):
         for index, row in enumerate(self.data_iterator):
             rows.append(row)
             if index > count or time.time() > time_limit:
-                print('BREAK', index, time.time() > time_limit)
                 break
 
         return rows
