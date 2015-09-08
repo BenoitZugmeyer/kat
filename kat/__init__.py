@@ -70,7 +70,7 @@ def search(d):
             age=get_text(tds[3]),
             seed=get_text(tds[4]),
             leech=get_text(tds[5]),
-            magnet=line('.imagnet')[0].attrib['href'],
+            magnet=line('[href^=magnet]')[0].attrib['href'],
         )
 
 
