@@ -18,6 +18,7 @@ setup(name='kat',
       install_requires=[
           'pyquery>=1.2.4',
           'Click',
+          'requests',
       ],
       entry_points={
           'console_scripts': ['kat=kat.__init__:cli'],
