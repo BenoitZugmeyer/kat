@@ -10,7 +10,7 @@ from pyquery import PyQuery as pq
 from . import tableformatter
 
 
-SEARCH_URL = 'http://kasssto.come.in/usearch/{}/?field=seeders&sorder=desc'
+SEARCH_URL = 'https://kat.cr/usearch/{}/?field=seeders&sorder=desc'
 
 
 def sanitize_text(text):
